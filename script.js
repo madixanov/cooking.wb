@@ -23,9 +23,10 @@ const recipes = [
 
 const foodList = document.querySelector(".food-list");
 
-recipes.forEach(recipe => {
+recipes.forEach((recipe, index) => {
   const card = document.createElement("div");
   card.className = "food-card";
+  card.style.animationDelay= `${index * 0.2}s`;
   card.innerHTML = `
     <div class="container-food-photo">
         <img src="${recipe.image}" alt="${recipe.name}" class="food-photo">
