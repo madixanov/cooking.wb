@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0px;
+    padding-top: 80px;
+    font-family: Poppins, arial;
+    background-color: #f9faf3;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0;
+    background-color: #ffd4db;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+    border-radius: 0 0 15px 15px;
+}
+
+.search-button {
+    width: 35px;
+    height: 35px;
+    background-color: #f9faf3;
+    border: none;
+    border-radius: 50%;
+}
+
+.search-icon {
+    width: 100%;
+    background-color: transparent;
+}
+
+.search-bar {
+    max-width: 400px;
+    height: 15px;
+    padding: 9px 20px;
+    background-color: #f9faf3;
+    border: none;
+    border-radius: 15px;
+}
+
+.container-search-bar {
+    display: flex;
+    gap: 5px;
+    vertical-align: center;
+    justify-content: center;
+}
+
+.website-name {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.food-list {
+    position: relative;
+    z-index: 1;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: calc(5 * 200px + 4 * 20px);
+    justify-content: center;
+}
+
+.food-card {
+    flex: 1 1 160px;
+    background-color: #eff1db;
+    max-width: 200px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    scale: 0.95;
+    border-radius: 15px;
+    transition: scale 0.3s;
+}
+
+.food-card:hover {
+    scale: 1;
+}
+
+.food-photo {
+    width: 100%;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.container-food-photo {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.food-description-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.food-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.button-container {
+    display: flex;
+}
+
+.about-button {
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    padding: 5px 10px;
+    color: #bd76e6;
+    border: 1px solid #bd76e6;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.1s, border 0.1s, background-color 0.1s;
+}
+
+.about-button:hover {
+    color: white;
+    border: none;
+    background-color: #bd76e6;
+}
+
+.name-card {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ingridient-card {
+    font-size: 10px;
+    margin: 10px 0;
+}
+
+@media (max-width: 400px) {
+    .food-card {
+        flex: 1 1 48%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .food-card {
+        width: 30%; /* 3 в строке */
+    }
+}
+
+@media (max-width: 700px) {
+    .food-card {
+        width: 45%; /* 2 в строке */
+    }
+}
+
+@media (max-width: 400px) {
+    .food-card {
+        width: 100%; /* 1 в строке */
+    }
+}
